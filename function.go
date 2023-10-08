@@ -18,17 +18,17 @@ func main(){
     // simpan hasil dari return function kedalam sebuah variable message
 	message := getCar(car)
     // tampilkan hasil dari variable message
-	fmt.Println(message)
+	printMessage(message)
 
     // output => Mobil BMW berwarna Black
 
 }
 
 func getCar(car map[string]string) (message string){
-	printMessage(car)
+	message = "Mobil " + car["name"] + " berwarna " + car["color"]
 	return 
 }
 
-func printMessage(car map[string]string) {
-	fmt.Println("Mobil " + car["name"] + " berwarna " + car["color"])
+func printMessage(messsage string) {
+	fmt.Println(messsage)
 }
